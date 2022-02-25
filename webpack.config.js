@@ -10,7 +10,7 @@ module.exports = {
     output:{
         path: path.resolve(__dirname, 'dist'),
         filename:'bundle.js',
-        publicPath:"/",
+        publicPath:"./",
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -38,7 +38,7 @@ module.exports = {
             {
                 test:/\.s[ac]ss$/,
                 use:[
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
                 ]
